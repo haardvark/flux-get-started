@@ -41,7 +41,7 @@ spec:
           protocol: TCP
         command:
         - ./podinfo
-        - --port=9898
+        - --port=9899
         - --level=info
         - --random-delay=false
         - --random-error=false
@@ -50,12 +50,12 @@ spec:
           value: white
         livenessProbe:
           httpGet:
-            path: /healthy
-            port: 9898
+            path: /healthz
+            port: 9899
         readinessProbe:
           httpGet:
             path: /readyz
-            port: 9898
+            port: 9899
         resources:
           limits:
             cpu: 1000m
