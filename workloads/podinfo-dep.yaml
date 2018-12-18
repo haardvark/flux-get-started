@@ -50,7 +50,7 @@ spec:
           value: white
         livenessProbe:
           httpGet:
-            path: /healthz
+            path: /healthy
             port: 9898
         readinessProbe:
           httpGet:
